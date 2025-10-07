@@ -66,7 +66,7 @@ Toolkit riset analisis dinamis & instrumentation untuk debugging dan reverse eng
 
 ---
 
-## 🎯 Alur Kerja Intelijen
+## 🎯 Alur Kerja Cyber Investigator 
 1. **Kumpulkan Data** — sumber publik, dump digital, atau metadata perangkat.  
 2. **Analisis & Normalisasi** — ekstraksi & klasifikasi informasi relevan.  
 3. **Korelasikan** — hubungan antar-entitas dan jaringan keterkaitan.  
@@ -94,22 +94,3 @@ Saya terbuka untuk:
 
 ---
 
-## 🧾 Panduan Cepat — Tampilkan README sebagai Halaman Web
-1. Buat repositori GitHub bernama **ammlrr.github.io**.  
-2. Letakkan file `README.md` ini di root repositori.  
-3. Aktifkan **GitHub Pages** (Settings → Pages → Source → main).  
-4. (Opsional) Tambahkan file `CNAME` untuk domain pribadi.
-
----
-
-## 🎨 Identitas Visual (Tema Rekomendasi)
-- Warna: `#0f172a` (gelap), `#00ffd1` (aksen neon), `#111827` (latar panel), `#8b5cf6` (highlight).  
-- Font: `Inter`, `JetBrains Mono`, atau `IBM Plex Mono`.  
-- Desain: gaya intelijen futuristik — kombinasi gelap, garis halus, dan tipografi monospaced.
-
-Contoh **header HTML** (jika ingin ditampilkan di `index.html`):
-```html
-<header style="background:linear-gradient(90deg,#020617,#07102a);padding:48px;border-radius:12px;color:#e6f7ff;">
-  <h1 style="font-family:Inter,system-ui;font-size:36px;margin:0;">AMMLRR</h1>
-  <p style="opacity:.85;margin-top:6px;">Intelijen Siber • OSINT • Pengembang Sistem</p>
-</header>
