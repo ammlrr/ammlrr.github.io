@@ -5,7 +5,7 @@ Tema: Intelijen Siber · OSINT · Profesional
 -->
 
 # 🕶️ AMMLRR — Siber • OSINT Investigator • Web Developer 
-> **Investigator Cyber Bersertifikat · Lulusan Ilmu Komputer · Audiophile & Pemburu Bitcoin**
+> **Investigator Cyber Bersertifikat Internasional · Lulusan Ilmu Komputer · Audiophile & Pemburu Bitcoin**
 
 [![Status](https://img.shields.io/badge/status-aktif-brightgreen)](https://github.com/AMMLRR)
 [![Teknologi](https://img.shields.io/badge/teknologi-android%20|%20web%20|%20keamanan-blueviolet)](https://github.com/AMMLRR)
@@ -14,7 +14,7 @@ Tema: Intelijen Siber · OSINT · Profesional
 ---
 
 ## 🛰️ Tentang Saya
-Saya adalah **penyelidik intelijen siber** dan **pengembang sistem** dengan keahlian di bidang:
+Saya adalah ** investigator siber** dan **Developer sistem scada, APK, dan Web** dengan keahlian di bidang:
 - **OSINT (Open Source Intelligence)** dan **forensik digital**
 - **Keamanan siber dan eksploitasi etis**
 - **Pemrograman web dan aplikasi Android**
