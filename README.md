@@ -1,7 +1,7 @@
-k<!--
+<!--
 README.md
 Author: @AMMLRR
-Tema: Intelijen Siber · OSINT · Profesional
+Tema: Siber · OSINT · Profesional
 -->
 
 # 🕶️ AMMLRR — Siber • OSINT Investigator • Web Developer 
