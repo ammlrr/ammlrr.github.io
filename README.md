@@ -1,4 +1,4 @@
-<!--
+k<!--
 README.md
 Author: @AMMLRR
 Tema: Intelijen Siber · OSINT · Profesional
@@ -14,7 +14,7 @@ Tema: Intelijen Siber · OSINT · Profesional
 ---
 
 ## 🛰️ Tentang Saya
-Saya adalah ** investigator siber** dan **Developer sistem scada, APK, dan Web** dengan keahlian di bidang:
+Saya adalah **investigator siber** dan **Developer sistem scada, APK, dan Web** dengan keahlian di bidang:
 - **OSINT (Open Source Intelligence)** dan **forensik digital**
 - **Keamanan siber dan eksploitasi etis**
 - **Pemrograman web dan aplikasi Android**
