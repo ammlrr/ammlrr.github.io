@@ -1,116 +1,162 @@
-🔐 CYBER INTELLIGENCE OPERATIVE
+<div align="center">🕵️‍♂️ MY PROFILE 🕵️‍♀️</div>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=3000&pause=1000&color=00FF41&center=true&vCenter=true&multiline=true&repeat=false&width=600&height=100&lines=CLASSIFIED+ACCESS+GRANTED;OPERATOR+%3A+AMMLRR;STATUS+%3A+ACTIVE" alt="Typing SVG" />
-/ |  /  |  /  | |    |  __ |  __ \
-| |    | \  / | \  / | |    | |) | |) |
-| |    | |/| | |/| | |    |  _  /|  _  /
-| || |  | | |  | | || | \ | | \ \
-_||  |||  ||_____||  __|  _\C Y B E R   I N T E L L I G E N C E
-[![GitHub Followers](https://img.shields.io/github/followers/AMMLRR?label=OPERATIVES&style=for-the-badge&color=00FF41&labelColor=0D1117&logo=github)](https://github.com/AMMLRR)
-[![Profile Views](https://komarev.com/ghpvc/?username=AMMLRR&label=RECONNAISSANCE&style=for-the-badge&color=00FF41&labelColor=0D1117)](https://github.com/AMMLRR)
-[![Status](https://img.shields.io/badge/STATUS-OPERATIONAL-00FF41?style=for-the-badge&labelColor=0D1117)](https://github.com/AMMLRR)
+<div align="center">
+
+https://img.shields.io/badge/Level-ELITE-red?style=for-the-badge&logo=security
+https://img.shields.io/badge/Status-AKTIF-hijau?style=for-the-badge
+https://img.shields.io/badge/Klasifikasi-LEVEL_7-hitam?style=for-the-badge
+
+</div>
+
+<br>
+
+<div align="center">
+
+```asciiart
+    █████╗ ███╗   ███╗██╗     ██╗     ██████╗ 
+   ██╔══██╗████╗ ████║██║     ██║     ██╔══██╗
+   ███████║██╔████╔██║██║     ██║     ██████╔╝
+   ██╔══██║██║╚██╔╝██║██║     ██║     ██╔══██╗
+   ██║  ██║██║ ╚═╝ ██║███████╗███████╗██║  ██║
+   ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝
+   OPERASI OSINT & KEAMANAN SIBER
+```
+
+</div>
+
+🎯 PROFIL MISI
+
+"Di bayang-bayang digital, kami beroperasi. Di mana data mengalir, kami menganalisis. Di mana sistem ada, kami amankan."
+
+Divisi Spesialisasi Status Klasifikasi
+🔐 Keamanan Siber Intelijen Ancaman & Penetration Testing 🟢 AKTIF LEVEL 7
+🌐 Operasi OSINT Pengintaian Digital & Pengumpulan Data 🟢 AKTIF LEVEL 6
+💻 Rekayasa Perangkat Lunak Pengembangan Full-Stack & Arsitektur Sistem 🟢 AKTIF LEVEL 5
+📱 Operasi Mobile Pengembangan Aplikasi Android & Keamanan 🟢 AKTIF LEVEL 5
+📞 Divisi Phreaking Keamanan Telekomunikasi & Analisis Jaringan 🟡 STANDBY LEVEL 8
+
+<br>
+
+🛠 PERALATAN OPERASIONAL
+
+Senjata Keamanan Siber
+
+```bash
+# Penetration Testing & Red Teaming
+├── Metasploit Framework
+├── Burp Suite Professional
+├── Nmap Network Scanner
+├── Wireshark Analysis
+└── Pengembangan Exploit Kustom
+```
+
+Suite Intelijen OSINT
+
+```python
+class PengumpulOSINT:
+    def __init__(self):
+        self.alat = [
+            "Maltego", "Shodan", "Recon-ng",
+            "theHarvester", "SpiderFoot", "Skrip Kustom"
+        ]
+    
+    def kumpulkan_intelijen(self, target):
+        return self.pengintaian_lanjutan(target)
+```
+
+Stack Pengembangan
+
+<div align="center">
+
+Frontend Backend Mobile Database Infrastruktur
+React.js Node.js Android (Kotlin) MongoDB Docker
+Vue.js Python Flutter PostgreSQL Kubernetes
+TypeScript Java React Native Redis AWS/Azure
+
+</div>
+
+<br>
+
+📊 DASHBOARD OPERASI
+
+<div align="center">
+
+https://github-readme-stats.vercel.app/api?username=AMMLRR&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117
+https://github-readme-stats.vercel.app/api/top-langs/?username=AMMLRR&layout=compact&theme=dark&hide_border=true&bg_color=0D1117
+
+</div>
+
+<br>
+
+🔥 OPERASI AKTIF
+
+Misi Saat Ini: Proyek Chimera
+
+```yaml
+nama_misi: "Chimera"
+klasifikasi: "SANGAT RAHASIA"
+tujuan: "Platform Intelijen Ancaman Tingkat Lanjut"
+status: "SEDANG_BERJALAN"
+teknologi: ["AI/ML", "Blockchain", "Arsitektur Zero-Trust"]
+eta: "Q4 2024"
+```
+
+Operasi Sukses Terbaru
+
+· 🚀 Operasi Phoenix: Mengamankan infrastruktur enterprise dari grup APT
+· 🔍 Proyek Insight: Mengembangkan framework otomasi OSINT
+· 📱 Mobile Shield: Meluncurkan aplikasi Android komunikasi aman
+· 🌐 Web Fortress: Menerapkan aplikasi web yang diperkuat
+
+<br>
+
+🎖️ SERTIFIKASI & KLASIFIKASI
+
+Sertifikasi Penerbit Status Tahun
+Offensive Security Certified Professional (OSCP) Offensive Security ✅ AKTIF 2023
+Certified Ethical Hacker (CEH) EC-Council ✅ AKTIF 2023
+AWS Solutions Architect Amazon Web Services ✅ AKTIF 2024
+Google Mobile Web Specialist ✅ AKTIF 2023
+
+<br>
+
+📡 PROTOKOL KOMUNIKASI
+
+<div align="center">
+
+SALURAN TERENKRIPSI AKTIF
+
+https://img.shields.io/badge/GitHub-@AMMLRR-hitam?style=for-the-badge&logo=github
+https://img.shields.io/badge/LinkedIn-Profil-biru?style=for-the-badge&logo=linkedin
+https://img.shields.io/badge/Email-Kontak-merah?style=for-the-badge&logo=protonmail
+
+</div>
+
+<br>
+
+⚠️ PEMBERITAHUAN KEAMANAN
+
+Repository ini dan isinya dilindungi di bawah protokol keamanan digital. Akses tidak sah, distribusi, atau modifikasi sangat dilarang dan dipantau.
+
+<div align="center">
+
+https://komarev.com/ghpvc/?username=AMMLRR&color=blue&style=flat-square
+
+PEMBARUAN SISTEM TERAKHIR: [TERKLASIFIKASI]
+BRIEFING KEAMANAN BERIKUTNYA: [TERENKRIPSI]
+STATUS OPERASIONAL: [NORMAL]
+
+---
+
+"Satu-satunya sistem yang aman adalah sistem yang tidak ada. Selanjutnya hanya masalah waktu."
+
+AKHIR TRANSMISI 🛰️
 
 </div>
 
 ---
 
-## 📡 OPERATOR PROFILE
-Designation: Cyber Intelligence Specialist
-Clearance: UNRESTRICTED
-Specialization:Offensive Security OperationsOpen Source Intelligence (OSINT)Network Infrastructure ExploitationFull-Stack DevelopmentMobile Application EngineeringPhreaking & Telecommunications
-Status: Active Deployment
-Location: [REDACTED]
-Encryption: PGP | AES-256
----
-
-## 🎯 MISSION CAPABILITIES
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### ⚔️ OFFENSIVE OPERATIONS┌─[CYBER WARFARE]
-│
-├─► Penetration Testing
-├─► Vulnerability Assessment
-├─► Exploit Development
-├─► Social Engineering
-├─► Red Team Operations
-└─► Advanced Persistent Threat (APT)
-</td>
-<td width="50%" valign="top">
-
-### 🔍 INTELLIGENCE GATHERING┌─[OSINT FRAMEWORK]
-│
-├─► Digital Footprint Analysis
-├─► Geolocation Intelligence
-├─► Dark Web Reconnaissance
-├─► Threat Intelligence
-├─► Data Mining & Scraping
-└─► Social Media Intelligence
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 💻 DEVELOPMENT ARSENAL┌─[SOFTWARE ENGINEERING]
-│
-├─► Full-Stack Web Development
-├─► Android Application Dev
-├─► API Development & Integration
-├─► Automation & Scripting
-├─► Database Architecture
-└─► Cloud Infrastructure
-</td>
-<td width="50%" valign="top">
-
-### 📞 TELECOMMUNICATIONS┌─[PHREAKING OPS]
-│
-├─► VoIP Security Analysis
-├─► Telecommunications Protocol
-├─► Signal Intelligence (SIGINT)
-├─► Radio Frequency Analysis
-├─► Network Protocol Analysis
-└─► Wireless Communication Sec
-</td>
-</tr>
-</table>
-
----
-
-## 🛠️ TACTICAL EQUIPMENT
-
-<div align="center">
-
-### OPERATING SYSTEMS
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white&labelColor=0D1117)
-![Parrot OS](https://img.shields.io/badge/Parrot_OS-15C3D6?style=for-the-badge&logo=parrotsecurity&logoColor=white&labelColor=0D1117)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white&labelColor=0D1117)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white&labelColor=0D1117)
-
-### PROGRAMMING ARSENAL
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0D1117)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black&labelColor=0D1117)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white&labelColor=0D1117)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white&labelColor=0D1117)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&labelColor=0D1117)
-
-### WEB TECHNOLOGIES
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=0D1117)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=0D1117)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB&labelColor=0D1117)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white&labelColor=0D1117)
-![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white&labelColor=0D1117)
-
-### DATABASES
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=0D1117)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=0D1117)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white&labelColor=0D1117)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white&labelColor=0D1117)
-
-### SECURITY TOOLS
-![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=for-the-badge&logo=metasploit&logoColor=white&labelColor=0D1117)
-![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burpsuite&logoColor=white&labelColor=0D1117)
+© 2024 AMMLRR Siber | Semua tools diklasifikasikan | Hanya untuk yang berkepentingan![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burpsuite&logoColor=white&labelColor=0D1117)
 ![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white&labelColor=0D1117)
 ![Nmap](https://img.shields.io/badge/Nmap-0E83CD?style=for-the-badge&logo=nmap&logoColor=white&labelColor=0D1117)
 
