@@ -1,40 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: none;
-}
-body {
-  background-color: #0d1117;
-  color: #e6e6e6;
-  font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
-}
-
-/* Cursor Glow */
-.cursor {
-  width: 20px;
-  height: 20px;
+.image-container {
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  position: fixed;
-  background: radial-gradient(circle, rgba(255,60,0,0.9) 0%, transparent 70%);
-  pointer-events: none;
-  mix-blend-mode: lighten;
-  transform: translate(-50%, -50%);
-  transition: transform 0.1s ease;
-  z-index: 9999;
+  overflow: hidden;
+  border: 3px solid #ff3c00;
+  box-shadow: 0 0 35px rgba(255,60,0,0.4);
+  margin-bottom: 1rem;
+  position: relative;
 }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%; /* Fokus di wajah & dada, potong bagian bawah */
+  transition: transform 0.5s ease;
+  filter: brightness(1.05) contrast(1.05) saturate(1.1);
+}
+
+.profile-pic:hover {
+  transform: scale(1.08);
+  filter: brightness(1.1) contrast(1.1);
+}  position: relative;
   text-align: center;
   overflow: hidden;
 }
