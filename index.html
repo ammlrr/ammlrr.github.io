@@ -10,74 +10,79 @@
 <body>
   <div class="cursor"></div>
 
+  <!-- Hero Section -->
   <header class="hero" id="home">
-    <div class="hero-overlay"></div>
+    <div class="parallax-bg"></div>
     <div class="hero-content">
       <div class="image-container">
         <img src="https://i.ibb.co.com/xqGrR3MW/IMG-20240325-WA0027.jpg" alt="@AMMLR" class="profile-pic" />
       </div>
-      <h1 class="intro">Hello<span class="dot">.</span></h1>
+      <h1>Hello<span class="dot">.</span></h1>
       <h2>I’m <span class="name">@AMMLR</span></h2>
       <h3 class="typing"></h3>
       <div class="buttons">
         <a href="mailto:observer@proton.me" class="btn primary">Hire Me</a>
-        <a href="#about" class="btn secondary">About Me</a>
+        <a href="#about" class="btn secondary">Learn More</a>
       </div>
     </div>
   </header>
 
+  <!-- About Section -->
   <section id="about" class="section about">
     <h2>About Me</h2>
     <p>
-      I’m <strong>Amir</strong> — a <strong>Certified Intelligence Investigator</strong>,
-      <strong>Cybersecurity Analyst</strong>, and <strong>OSINT Developer</strong>.
-      My expertise bridges digital forensics, Android kernel engineering, and open-source intelligence.
+      I’m <strong>Amir</strong> — known as <strong>@AMMLR</strong>, a <strong>Certified Intelligence Investigator</strong> and 
+      <strong>Cyber-OSINT Developer</strong> who blends analytical precision with creative intuition.  
+      My craft lies in bridging cyber operations, data forensics, and visual intelligence.
     </p>
     <p>
-      My projects fuse art, investigation, and computation — from building forensic dashboards and network scanners,
-      to reverse-engineering Android systems. Each line of code I write follows a principle:
-      <em>“Precision, secrecy, and control.”</em>
+      From dissecting Android kernels to constructing advanced OSINT dashboards, 
+      I design tools that empower digital sovereignty.  
+      My ethos: <em>“Data never lies — interpretation does.”</em>
     </p>
+
     <div class="skills">
       <div class="skill-card">
         <h3>🧠 Intelligence & OSINT</h3>
-        <p>Maltego • Recon-ng • SpiderFoot • Data Correlation Visualization</p>
+        <p>Maltego • Recon-ng • SpiderFoot • Data Visualization • HUMINT Fusion</p>
       </div>
       <div class="skill-card">
         <h3>💻 Development</h3>
-        <p>Python • Bash • HTML/CSS • JS • Android Kernel • Automation Scripts</p>
+        <p>Python • Bash • JS • HTML/CSS • Android Kernel • Automation Systems</p>
       </div>
       <div class="skill-card">
         <h3>📡 Cyber Operations</h3>
-        <p>Wi-Fi Exploit Simulations • Network Recon • Digital Forensics</p>
+        <p>Wireless Recon • Exploit Simulation • Forensic Automation</p>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><h3>120+</h3><p>Completed Projects</p></div>
+      <div class="stat"><h3>120+</h3><p>Projects Completed</p></div>
       <div class="stat"><h3>95%</h3><p>Client Satisfaction</p></div>
       <div class="stat"><h3>10+</h3><p>Years of Experience</p></div>
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects" class="section projects">
-    <h2>Highlighted Projects</h2>
+    <h2>Featured Works</h2>
     <div class="project-grid">
       <div class="project-card">
         <h3>🕵️ Intel Dashboard</h3>
-        <p>Interactive cyber-intel web interface visualizing live reconnaissance data.</p>
+        <p>Real-time OSINT interface visualizing complex intelligence networks.</p>
       </div>
       <div class="project-card">
         <h3>⚙️ SmartGrep CLI</h3>
-        <p>Multithreaded Termux log analyzer with advanced search heuristics.</p>
+        <p>Multi-threaded log analyzer built for Termux with pattern heuristics.</p>
       </div>
       <div class="project-card">
         <h3>📱 Kernel Injector</h3>
-        <p>Custom kernel modification utility integrating KSU and Magisk automation.</p>
+        <p>Android kernel patching suite integrating KSU, Magisk, and custom hooks.</p>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="section contact">
     <h2>Contact</h2>
     <div class="socials">
@@ -93,20 +98,41 @@
 
   <script>
     // typing effect
-    const text = ["Cyber Intelligence & OSINT Developer", "Forensic Analyst", "Android Kernel Engineer"];
-    let i = 0, j = 0, current = "", isDeleting = false;
+    const words = [
+      "Cyber Intelligence & OSINT Developer",
+      "Forensic Analyst",
+      "Android Kernel Engineer",
+      "Data Visualization Architect"
+    ];
+    let i = 0, j = 0, isDeleting = false;
     const typing = document.querySelector(".typing");
     function type() {
-      current = text[i];
-      typing.textContent = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
-      if (!isDeleting && j === current.length + 5) isDeleting = true;
-      else if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % text.length; }
-      setTimeout(type, isDeleting ? 40 : 120);
+      const current = words[i];
+      typing.textContent = isDeleting
+        ? current.substring(0, j--)
+        : current.substring(0, j++);
+      if (!isDeleting && j === current.length + 6) isDeleting = true;
+      else if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % words.length; }
+      setTimeout(type, isDeleting ? 40 : 100);
     }
     type();
 
     // scroll reveal
-    ScrollReveal().reveal('.section', { delay: 200, distance: '50px', origin: 'bottom', duration: 800, easing: 'ease-in-out' });
+    ScrollReveal().reveal('.section', {
+      delay: 200,
+      distance: '50px',
+      origin: 'bottom',
+      duration: 800,
+      easing: 'ease-in-out'
+    });
+
+    // parallax background
+    document.addEventListener("mousemove", (e) => {
+      const bg = document.querySelector(".parallax-bg");
+      const x = (window.innerWidth - e.pageX * 2) / 100;
+      const y = (window.innerHeight - e.pageY * 2) / 100;
+      bg.style.transform = `translate(${x}px, ${y}px) scale(1.1)`;
+    });
 
     // glowing cursor
     const cursor = document.querySelector(".cursor");
