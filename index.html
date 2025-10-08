@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>@AMMLR | Cyber Intelligence Developer</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
+  <div class="cursor"></div>
+
+  <header class="hero" id="home">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <img src="https://i.ibb.co.com/xqGrR3MW/IMG-20240325-WA0027.jpg" alt="@AMMLR" class="profile-pic" />
-      <h1>Hello<span class="dot">.</span></h1>
-      <h2>I'm <span class="name">@AMMLR</span></h2>
-      <h3>Cyber Intelligence & OSINT Developer</h3>
+      <div class="image-container">
+        <img src="https://i.ibb.co.com/xqGrR3MW/IMG-20240325-WA0027.jpg" alt="@AMMLR" class="profile-pic" />
+      </div>
+      <h1 class="intro">Hello<span class="dot">.</span></h1>
+      <h2>I’m <span class="name">@AMMLR</span></h2>
+      <h3 class="typing"></h3>
       <div class="buttons">
-        <a href="mailto:observer@proton.me" class="btn primary">Get a Project</a>
-        <a href="https://github.com/ammlrr" class="btn secondary">My Resume</a>
+        <a href="mailto:observer@proton.me" class="btn primary">Hire Me</a>
+        <a href="#about" class="btn secondary">About Me</a>
       </div>
     </div>
   </header>
@@ -24,19 +29,29 @@
   <section id="about" class="section about">
     <h2>About Me</h2>
     <p>
-      I am <strong>Amir</strong>, known online as <strong>@AMMLR</strong> — a
-      <em>Certified Intelligence Investigator</em> and passionate
-      <strong>Cyber & OSINT Developer</strong> who blends deep technical
-      analysis with artistic precision. I specialize in Android kernel
-      development, digital forensics, and open-source intelligence visualization.
+      I’m <strong>Amir</strong> — a <strong>Certified Intelligence Investigator</strong>,
+      <strong>Cybersecurity Analyst</strong>, and <strong>OSINT Developer</strong>.
+      My expertise bridges digital forensics, Android kernel engineering, and open-source intelligence.
     </p>
     <p>
-      My work combines technology, creativity, and investigation — from crafting
-      Termux automation scripts, network intelligence dashboards, to forensic tools
-      designed for real-world cyber analysis. Driven by curiosity and precision,
-      I thrive in connecting data, discovering truth, and building systems that
-      empower information sovereignty.
+      My projects fuse art, investigation, and computation — from building forensic dashboards and network scanners,
+      to reverse-engineering Android systems. Each line of code I write follows a principle:
+      <em>“Precision, secrecy, and control.”</em>
     </p>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>🧠 Intelligence & OSINT</h3>
+        <p>Maltego • Recon-ng • SpiderFoot • Data Correlation Visualization</p>
+      </div>
+      <div class="skill-card">
+        <h3>💻 Development</h3>
+        <p>Python • Bash • HTML/CSS • JS • Android Kernel • Automation Scripts</p>
+      </div>
+      <div class="skill-card">
+        <h3>📡 Cyber Operations</h3>
+        <p>Wi-Fi Exploit Simulations • Network Recon • Digital Forensics</p>
+      </div>
+    </div>
 
     <div class="stats">
       <div class="stat"><h3>120+</h3><p>Completed Projects</p></div>
@@ -45,17 +60,60 @@
     </div>
   </section>
 
+  <section id="projects" class="section projects">
+    <h2>Highlighted Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>🕵️ Intel Dashboard</h3>
+        <p>Interactive cyber-intel web interface visualizing live reconnaissance data.</p>
+      </div>
+      <div class="project-card">
+        <h3>⚙️ SmartGrep CLI</h3>
+        <p>Multithreaded Termux log analyzer with advanced search heuristics.</p>
+      </div>
+      <div class="project-card">
+        <h3>📱 Kernel Injector</h3>
+        <p>Custom kernel modification utility integrating KSU and Magisk automation.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="section contact">
-    <h2>Connect</h2>
+    <h2>Contact</h2>
     <div class="socials">
-      <a href="https://twitter.com/AMMMLR" target="_blank">🐦 Twitter</a>
-      <a href="https://instagram.com/AMMLR" target="_blank">📸 Instagram</a>
-      <a href="mailto:observer@proton.me">✉️ observer@proton.me</a>
+      <a href="https://twitter.com/AMMMLR" target="_blank" class="social-btn">🐦 Twitter</a>
+      <a href="https://instagram.com/AMMLR" target="_blank" class="social-btn">📸 Instagram</a>
+      <a href="mailto:observer@proton.me" class="social-btn">✉️ observer@proton.me</a>
     </div>
   </section>
 
   <footer>
     <p>© 2025 @AMMLR — Cyber Intelligence & OSINT Developer</p>
   </footer>
+
+  <script>
+    // typing effect
+    const text = ["Cyber Intelligence & OSINT Developer", "Forensic Analyst", "Android Kernel Engineer"];
+    let i = 0, j = 0, current = "", isDeleting = false;
+    const typing = document.querySelector(".typing");
+    function type() {
+      current = text[i];
+      typing.textContent = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
+      if (!isDeleting && j === current.length + 5) isDeleting = true;
+      else if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % text.length; }
+      setTimeout(type, isDeleting ? 40 : 120);
+    }
+    type();
+
+    // scroll reveal
+    ScrollReveal().reveal('.section', { delay: 200, distance: '50px', origin: 'bottom', duration: 800, easing: 'ease-in-out' });
+
+    // glowing cursor
+    const cursor = document.querySelector(".cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.pageX + "px";
+      cursor.style.top = e.pageY + "px";
+    });
+  </script>
 </body>
 </html>
