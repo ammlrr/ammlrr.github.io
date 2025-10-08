@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: #e6e6e6;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #111 0%, #0d1117 100%);
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,60,0,0.15) 0%, transparent 70%);
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #ff3c00;
+  box-shadow: 0 0 30px rgba(255,60,0,0.3);
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+.hero-content h2 {
+  font-size: 2rem;
+  color: #ff3c00;
+}
+.hero-content h3 {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: .3rem;
+}
+.hero-content .dot {
+  color: #ff3c00;
+}
+.hero-content .buttons {
+  margin-top: 2rem;
+}
+.btn {
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  background: #ff3c00;
+  color: #fff;
+}
+.btn.secondary {
+  border: 2px solid #ff3c00;
+  color: #ff3c00;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,60,0,0.4);
+}
+
+/* About Section */
+.section {
+  max-width: 900px;
+  margin: 5rem auto;
+  text-align: center;
+  padding: 2rem;
+}
+.about h2, .contact h2 {
+  color: #ff3c00;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about p {
+  color: #ccc;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.stat h3 {
+  color: #ff3c00;
+  font-size: 2rem;
+}
+.stat p {
+  color: #aaa;
+}
+
+/* Contact */
+.contact .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact a {
+  color: #ff3c00;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.contact a:hover {
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #222;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
+}
