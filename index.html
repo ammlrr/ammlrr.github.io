@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMIR | Analis, Peneliti Siber & Pengembang Sistem</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <title>AMIR | Cybersecurity Researcher & Systems Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
     :root {
-      --bg-dark: #05070c;
-      --bg-panel: #0d1220;
-      --accent: #00ffe0;
-      --accent2: #8b5cf6;
-      --text: #e6e7eb;
-      --muted: #9ca3af;
-      --radius: 14px;
+      --bg-primary: #0a0e17;
+      --bg-secondary: #151a2b;
+      --bg-card: #1a1f33;
+      --accent-cyan: #00d9ff;
+      --accent-purple: #a855f7;
+      --accent-pink: #ec4899;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --border-color: #1e293b;
+      --glow-cyan: rgba(0, 217, 255, 0.3);
+      --glow-purple: rgba(168, 85, 247, 0.3);
     }
 
     * {
@@ -23,256 +28,563 @@
     }
 
     body {
-      font-family: "Inter", sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text);
+      font-family: "Space Grotesk", sans-serif;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, #0f1419 100%);
+      color: var(--text-primary);
       overflow-x: hidden;
-    }
-
-    header {
-      text-align: center;
-      padding: 90px 20px 60px;
       position: relative;
-      overflow: hidden;
     }
 
-    header::before {
+    body::before {
       content: "";
-      position: absolute;
-      width: 800px;
-      height: 800px;
-      top: -200px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: radial-gradient(circle, rgba(139, 92, 246, 0.2), transparent 70%);
-      filter: blur(60px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 20%, var(--glow-purple) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, var(--glow-cyan) 0%, transparent 50%);
+      opacity: 0.3;
       z-index: 0;
+      pointer-events: none;
     }
 
-    .photo {
-      width: 190px;
-      height: 190px;
+    .grain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.03;
+      z-index: 1;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Header */
+    header {
+      padding: 120px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 32px;
+    }
+
+    .avatar-glow {
+      position: absolute;
+      inset: -20px;
+      background: conic-gradient(from 0deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink), var(--accent-cyan));
+      border-radius: 50%;
+      animation: rotate 4s linear infinite;
+      opacity: 0.6;
+      filter: blur(20px);
+    }
+
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    .avatar {
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--accent2);
-      z-index: 1;
+      border: 4px solid var(--bg-primary);
       position: relative;
-      box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
-      animation: glow 5s infinite alternate;
+      z-index: 1;
     }
 
-    @keyframes glow {
-      from { box-shadow: 0 0 25px rgba(0,255,224,0.2); }
-      to { box-shadow: 0 0 60px rgba(0,255,224,0.5); }
+    .title-wrapper {
+      margin-bottom: 16px;
     }
 
     h1 {
-      font-size: 2.3rem;
-      margin-top: 25px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 700;
-      color: var(--accent);
+      background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
     }
 
-    h2 {
+    .subtitle {
       font-family: "JetBrains Mono", monospace;
-      color: var(--text);
-      font-size: 1rem;
-      margin-top: 8px;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-weight: 500;
     }
 
-    p.tagline {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 0.95rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+    .tagline {
+      max-width: 720px;
+      margin: 0 auto 48px;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
+    /* Navigation */
     nav {
-      margin-top: 50px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 28px;
+      gap: 16px;
     }
 
     nav a {
       text-decoration: none;
-      color: var(--text);
-      border: 1px solid var(--accent2);
-      padding: 10px 24px;
-      border-radius: var(--radius);
+      color: var(--text-primary);
+      padding: 12px 28px;
+      border-radius: 12px;
       font-size: 0.95rem;
-      transition: all 0.3s;
+      font-weight: 600;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    nav a span {
+      position: relative;
+      z-index: 1;
     }
 
     nav a:hover {
-      background: var(--accent2);
-      color: #fff;
-      box-shadow: 0 0 15px var(--accent2);
+      transform: translateY(-2px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 8px 24px var(--glow-cyan);
     }
 
+    nav a:hover::before {
+      opacity: 0.1;
+    }
+
+    /* Sections */
     section {
-      max-width: 1050px;
-      margin: 80px auto;
-      padding: 0 8%;
+      padding: 80px 0;
     }
 
-    section h3 {
-      color: var(--accent);
-      font-size: 1.6rem;
-      border-left: 4px solid var(--accent2);
-      padding-left: 12px;
-      margin-bottom: 25px;
+    .section-header {
+      margin-bottom: 48px;
     }
 
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+      border-radius: 2px;
+    }
+
+    .section-description {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-top: 24px;
+    }
+
+    /* Profile List */
+    .profile-list {
+      list-style: none;
+      margin-top: 32px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .profile-list li {
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
+
+    .profile-list li:hover {
+      border-color: var(--accent-cyan);
+      transform: translateX(8px);
+      background: linear-gradient(135deg, var(--bg-card) 0%, rgba(0, 217, 255, 0.05) 100%);
+    }
+
+    /* Grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
     }
 
     .card {
-      background: var(--bg-panel);
-      padding: 24px;
-      border-radius: var(--radius);
-      border: 1px solid #1f2937;
-      transition: 0.3s;
+      background: var(--bg-card);
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
     }
 
     .card:hover {
-      border-color: var(--accent);
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(0,255,224,0.15);
+      transform: translateY(-8px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 12px 40px rgba(0, 217, 255, 0.2);
     }
 
-    .card h4 {
-      color: var(--accent2);
-      margin-bottom: 10px;
-      font-size: 1.2rem;
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text-primary);
     }
 
     .card p {
-      color: var(--muted);
+      color: var(--text-secondary);
       line-height: 1.6;
       font-size: 0.95rem;
     }
 
-    footer {
-      text-align: center;
-      padding: 50px 0;
-      border-top: 1px solid #1f2937;
-      font-size: 0.9rem;
-      color: var(--muted);
+    /* Contact */
+    .contact-info {
+      background: var(--bg-card);
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      max-width: 700px;
+      margin: 0 auto;
     }
 
+    .contact-info > p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .contact-links {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 24px;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .contact-link:hover {
+      border-color: var(--accent-cyan);
+      transform: translateX(8px);
+      box-shadow: 0 4px 16px var(--glow-cyan);
+    }
+
+    .contact-link-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      border-radius: 10px;
+      font-size: 1.3rem;
+      color: var(--text-primary);
+      flex-shrink: 0;
+    }
+
+    .contact-link-content {
+      flex: 1;
+    }
+
+    .contact-link-label {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .contact-link-value {
+      color: var(--text-primary);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .contact-link:hover .contact-link-value {
+      color: var(--accent-cyan);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 48px 24px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 80px;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      h1 { font-size: 1.9rem; }
-      .photo { width: 150px; height: 150px; }
-      nav { gap: 16px; }
-      nav a { padding: 8px 18px; font-size: 0.9rem; }
-      section { padding: 0 6%; }
+      header { padding: 80px 0 60px; }
+      .avatar { width: 140px; height: 140px; }
+      section { padding: 60px 0; }
+      .grid { grid-template-columns: 1fr; }
+      .contact-info { padding: 28px; }
+      .contact-link { padding: 16px 20px; }
+      .contact-link-icon { width: 42px; height: 42px; font-size: 1.1rem; }
     }
   </style>
 </head>
 <body>
+  <div class="grain"></div>
+  
   <header>
-    <img src="images.jpg" alt="@AMMLRR" class="photo" />
-    <h1>@AMMLRR</h1>
-    <h2>Peneliti Siber • Pengembang Web • Android Engineer</h2>
-    <p class="tagline">
-      Investigator independen di bidang siber dan OSINT.  
-      Membangun sistem, website, dan aplikasi Android dengan pendekatan teknis mendalam, desain modern, serta kemampuan analisis data dan keamanan tingkat tinggi.
-    </p>
-    <nav>
-      <a href="#profil">Profil</a>
-      <a href="#keahlian">Keahlian</a>
-      <a href="#proyek">Proyek</a>
-      <a href="#kontak">Kontak</a>
-    </nav>
+    <div class="container">
+      <div class="avatar-wrapper">
+        <div class="avatar-glow"></div>
+        <img src="images.jpg" alt="AMIR Portfolio" class="avatar" />
+      </div>
+      
+      <div class="title-wrapper">
+        <h1>@AMMLRR</h1>
+        <p class="subtitle">Cybersecurity Researcher • Full-Stack Developer • Android Systems Engineer</p>
+      </div>
+      
+      <p class="tagline">
+        Profesional independen di bidang penelitian keamanan dengan keahlian mendalam dalam pengembangan sistem, aplikasi web, dan aplikasi Android. Mengintegrasikan analisis forensik digital dengan pengembangan solusi teknologi yang aman, efisien, dan terukur.
+      </p>
+      
+      <nav>
+        <a href="#profil"><span>Profil</span></a>
+        <a href="#keahlian"><span>Keahlian</span></a>
+        <a href="#proyek"><span>Proyek</span></a>
+        <a href="#kontak"><span>Kontak</span></a>
+      </nav>
+    </div>
   </header>
 
-  <section id="profil">
-    <h3>Profil Singkat</h3>
-    <p>
-      Saya menggabungkan riset keamanan digital, OSINT (Open Source Intelligence), dan pengembangan perangkat lunak menjadi satu kesatuan kerja analitis.  
-      Dengan latar belakang IT, saya fokus pada penciptaan sistem, website, dan aplikasi yang efisien, adaptif, serta mendukung analisis siber tingkat lanjut.  
-      Keahlian saya mencakup:
-    </p>
-    <br>
-    <ul style="color: var(--muted); line-height: 1.8;">
-      <li>⚙️ Membangun website dinamis dengan arsitektur modern (React, Node.js, Tailwind)</li>
-      <li>📱 Mengembangkan aplikasi Android & optimasi kernel (KernelSU, Magisk, HyperOS)</li>
-      <li>🧠 Melakukan riset OSINT (Open Source Intelligence), digital forensik, dan reverse engineering</li>
-      <li>💾 Automasi sistem dengan Bash, Python, dan Termux environment</li>
-      <li>🌐 Menyusun visualisasi data berbasis peta & timeline interaktif</li>
-    </ul>
-  </section>
+  <main class="container">
+    <section id="profil">
+      <div class="section-header">
+        <h2>Profil Profesional</h2>
+      </div>
+      
+      <p class="section-description">
+        Spesialisasi dalam mengintegrasikan riset keamanan informasi, Open Source Intelligence, dan pengembangan perangkat lunak tingkat enterprise. Merancang dan mengimplementasikan sistem yang mendukung operasi keamanan siber dengan standar industri tinggi.
+      </p>
+      
+      <ul class="profile-list">
+        <li>⚙️ <strong>Pengembangan Web Full-Stack</strong> — Membangun aplikasi web scalable dengan arsitektur modern menggunakan React, Node.js, dan Tailwind CSS dengan fokus pada performa dan keamanan</li>
+        <li>📱 <strong>Android Systems Engineering</strong> — Pengembangan aplikasi Android native, modifikasi kernel (KernelSU, Magisk), dan optimasi sistem tingkat rendah untuk HyperOS dan AOSP</li>
+        <li>🧠 <strong>Peneliti cyber & Digital Forensics</strong> — Melakukan investigasi digital komprehensif, analisis forensik, dan reverse engineering dengan metodologi profesional</li>
+        <li>💾 <strong>System Automation & DevOps</strong> — Implementasi pipeline CI/CD, scripting (Bash, Python), containerization (Docker), dan automasi infrastruktur berbasis Linux</li>
+        <li>🌐 <strong>Data Visualization & Intelligence</strong> — Mengembangkan dashboard interaktif, visualisasi relasi data, dan sistem pelaporan berbasis graph dan geospatial mapping</li>
+      </ul>
+    </section>
 
-  <section id="keahlian">
-    <h3>Keahlian Teknis</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>🌐 Pengembangan Web</h4>
-        <p>Front-end dengan React/Tailwind, back-end dengan Node.js & FastAPI.  
-        Desain UI yang fokus pada kecepatan dan presisi data.</p>
+    <section id="keahlian">
+      <div class="section-header">
+        <h2>Kompetensi Teknis</h2>
       </div>
-      <div class="card">
-        <h4>📱 Android & Kernel Engineering</h4>
-        <p>Modifikasi kernel, integrasi KSU, dan riset sistem Android tingkat rendah untuk performa dan keamanan.</p>
+      
+      <div class="grid">
+        <div class="card">
+          <span class="card-icon">🌐</span>
+          <h3>Full-Stack Development</h3>
+          <p>Pengembangan aplikasi web end-to-end dengan React, Next.js, Node.js, dan FastAPI. Implementasi REST API, WebSocket, dan integrasi database PostgreSQL/MongoDB untuk solusi enterprise-grade.</p>
+        </div>
+        
+        <div class="card">
+          <span class="card-icon">📱</span>
+          <h3>Android & Kernel Engineering</h3>
+          <p>Membangun kernel Linux untuk Android, integrasi root management (KernelSU, Magisk), serta riset sistem operasi mobile tingkat rendah dengan fokus pada performa dan keamanan sistem.</p>
+        </div>
+        
+        <div class="card">
+          <span class="card-icon">🕵️</span>
+          <h3>Digital Forensics</h3>
+          <p>Pengumpulan data dari sumber terbuka, analisis forensik digital, threat intelligence, dan investigasi keamanan siber dengan tools industri standar dan custom frameworks.</p>
+        </div>
+        
+        <div class="card">
+          <span class="card-icon">⚡</span>
+          <h3>DevOps & Infrastructure</h3>
+          <p>Automasi deployment dengan GitHub Actions, Docker orchestration, infrastructure as code (IaC), monitoring systems, dan scripting untuk optimasi workflow development dan production.</p>
+        </div>
+        
+        <div class="card">
+          <span class="card-icon">🔒</span>
+          <h3>Cybersecurity Research</h3>
+          <p>Vulnerability assessment, penetration testing, security auditing, dan pengembangan strategi defensive security untuk aplikasi web dan mobile dengan standar OWASP.</p>
+        </div>
+        
+        <div class="card">
+          <span class="card-icon">📊</span>
+          <h3>Data Intelligence & Visualization</h3>
+          <p>Desain dan implementasi dashboard real-time, graph database (Neo4j), network analysis, dan visualisasi data kompleks untuk keperluan intelligence dan decision-making.</p>
+        </div>
       </div>
-      <div class="card">
-        <h4>🕵️ OSINT & Forensik Digital</h4>
-        <p>Pengumpulan, analisis, dan visualisasi data dengan pendekatan forensik.</p>
-      </div>
-      <div class="card">
-        <h4>⚡ Automasi & DevOps</h4>
-        <p>Scripting, CI/CD GitHub Actions, Docker deployment, hingga automation pipeline di Termux/Linux.</p>
-      </div>
-      <div class="card">
-        <h4>🧩 Desain Sistem & Visual</h4>
-        <p>Rancang sistem dan antarmuka dengan nuansa elegan, fungsional, dan efisien.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="proyek">
-    <h3>Proyek Utama</h3>
-    <div class="grid">
-      <div class="card">
-        <h4>Shodan-dashboard</h4>
-        <p>Dasbor OSINT (Open Source Intelligence) real-time dengan peta relasi, timeline, dan laporan terstruktur.</p>
+    <section id="proyek">
+      <div class="section-header">
+        <h2>Portfolio Proyek</h2>
       </div>
-      <div class="card">
-        <h4>termux-automator</h4>
-        <p>Automasi dan manajemen data di lingkungan Termux untuk efisiensi analisis.</p>
+      
+      <div class="grid">
+        <div class="card">
+          <span class="card-icon">🔍</span>
+          <h3>Modern Intelligence Dashboard</h3>
+          <p>Platform real-time dengan visualisasi peta relasi, timeline analisis, dan sistem pelaporan terstruktur untuk threat intelligence dan security monitoring.</p>
+        </div>
+        
+        <div class="card">
+          <span class="card-icon">🤖</span>
+          <h3>Termux Automation Framework</h3>
+          <p>Framework automasi comprehensive untuk manajemen data, scripting workflows, dan analisis di lingkungan Termux dengan integrasi API dan notification systems.</p>
+        </div>
+        
+        <div class="card">
+          <span class="card-icon">⚙️</span>
+          <h3>Custom Android Kernel</h3>
+          <p>Kernel research project dengan performance patches, security enhancements, dan dukungan eksperimental untuk optimasi hardware pada perangkat mobile Android.</p>
+        </div>
+        
+        <div class="card">
+          <span class="card-icon">🌐</span>
+          <h3>Web Intelligence Visualization</h3>
+          <p>Aplikasi web interaktif untuk memetakan hubungan antar entitas digital menggunakan graph visualization, geospatial mapping, dan network analysis algorithms.</p>
+        </div>
       </div>
-      <div class="card">
-        <h4>android-kernel</h4>
-        <p>Kernel riset dengan patch performa dan dukungan eksperimental.</p>
-      </div>
-      <div class="card">
-        <h4>web-report-visual</h4>
-        <p>Situs interaktif untuk menampilkan hubungan antar entitas digital, berbasis graph & map visualization.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="kontak">
-    <h3>Kontak & Kolaborasi</h3>
-    <p>
-      Untuk kolaborasi, riset, atau proyek keamanan siber profesional:  
-      <br><br>
-      🐦 Twitter/X: <a href="https://x.com/AMMLR" style="color:var(--accent)">@AMMLR</a><br>
-      ✉️ Email: <span style="color:var(--accent)">observer@proton.me</span><br>
-      📍 Lokasi: Operasional Global
-    </p>
-  </section>
+    <section id="kontak">
+      <div class="section-header">
+        <h2>Kontak Profesional</h2>
+      </div>
+      
+      <div class="contact-info">
+        <p>
+          Terbuka untuk kolaborasi proyek, konsultasi keamanan siber, penelitian bersama, dan pengembangan solusi teknologi enterprise. Tersedia untuk kontrak jangka pendek maupun panjang dengan NDA.
+        </p>
+        
+        <div class="contact-links">
+          <a href="https://x.com/AMMLR" target="_blank" class="contact-link">
+            <div class="contact-link-icon">
+              <i class="fab fa-x-twitter"></i>
+            </div>
+            <div class="contact-link-content">
+              <div class="contact-link-label">Twitter / X</div>
+              <div class="contact-link-value">@AMMLR</div>
+            </div>
+          </a>
+          
+          <a href="https://instagram.com/ammlr" target="_blank" class="contact-link">
+            <div class="contact-link-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="contact-link-content">
+              <div class="contact-link-label">Instagram</div>
+              <div class="contact-link-value">@ammlr</div>
+            </div>
+          </a>
+          
+          <a href="mailto:observer@proton.me" class="contact-link">
+            <div class="contact-link-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-link-content">
+              <div class="contact-link-label">Email Terenkripsi</div>
+              <div class="contact-link-value">observer@proton.me</div>
+            </div>
+          </a>
+          
+          <div class="contact-link" style="cursor: default;">
+            <div class="contact-link-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="contact-link-content">
+              <div class="contact-link-label">Lokasi Operasional</div>
+              <div class="contact-link-value">Remote — Global Coverage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    © 2025 - Dibangun dengan presisi, disiplin, dan kecerdasan siber modern.
+    <div class="container">
+      © 2025 AMMLRR — Engineered with precision, security, and modern development practices.
+    </div>
   </footer>
 </body>
 </html>
